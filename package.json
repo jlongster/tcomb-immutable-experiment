@@ -1,0 +1,7 @@
+{
+  "name": "tcomb-immutable-experiment",
+  "dependencies": {
+    "immutable": "^3.8.1",
+    "tcomb": "^3.2.3"
+  }
+}
