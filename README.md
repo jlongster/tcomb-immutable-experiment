@@ -7,6 +7,8 @@ tcomb provides a nice way to specify runtime types, especially for data. You can
 
 By default, it only works with native JS objects. We are using immutable.js though, so we wanted to type the as well.
 
+I copied most of the implementations of list, dict, and struct and converted them to immutable types (hence differing code styles). This is where I ended up.
+
 Typing both immutable and non-immutable data gives huge clarity in the whole system. It's easy to see which objects are immutable or not, and the types know how to hydrate/dehydrate data. You'll never need `fromJS` again, because the type will automatically convert things to immutable when needed.
 
 See [usage.js](https://github.com/jlongster/tcomb-immutable-experiment/blob/master/usage.js) for usage examples.
