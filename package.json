@@ -1,7 +1,13 @@
 {
   "name": "tcomb-immutable-experiment",
+  "scripts": {
+    "lint": "eslint imdict.js iminterface.js imlist.js"
+  },
   "dependencies": {
     "immutable": "^3.8.1",
     "tcomb": "^3.2.3"
+  },
+  "devDependencies": {
+    "eslint": "^3.0.1"
   }
 }

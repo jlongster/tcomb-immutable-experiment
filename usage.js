@@ -1,12 +1,12 @@
 const t = require("tcomb");
-const imstruct = require("./imstruct");
+const iminterface = require("./iminterface");
 const imlist = require("./imlist");
 const imdict = require("./imdict");
 
 // Change ANY of the data passed in to the type constructors and you
 // will see nice errors.
 
-const Person = imstruct({
+const Person = iminterface({
   name: t.String,
   age: t.Number
 });
@@ -25,7 +25,7 @@ console.log(ByName({
   "Georgia": { name: "Georgia", age: 1 }
 }));
 
-const MorePeople = imstruct({
+const MorePeople = iminterface({
   people: imdict(t.String, Person),
   areFun: t.Boolean
 });
@@ -39,3 +39,6 @@ console.log(people.setIn(
   ["people", "bar"],
   { name: "Georgia", age: 1 }
 ));
+
+// issue #1
+console.log(people.mergeIn(["people", "Jim"], { name: "Jim", age: 30 }));

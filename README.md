@@ -13,17 +13,13 @@ Typing both immutable and non-immutable data gives huge clarity in the whole sys
 
 See [usage.js](https://github.com/jlongster/tcomb-immutable-experiment/blob/master/usage.js) for usage examples.
 
-## WARNING
-
-This is a proof of concept and there are bugs. Unfortunately, I have to make sure that typed immutable.js objects always return typed immutable.js objects, which is hard because I have to wrap the API. There are holes in this. For example, `mergeIn` does not work with deep maps right now.
-
 ## imdict
 
 Defines a dictionary type, analagous to the [t.dict](https://github.com/gcanti/tcomb/blob/master/docs/API.md#the-dict-combinator) combinator.
 
-## imstruct
+## iminterface
 
-Defines an immutable struct type (similar to Immutable.Record), analagous to the [t.struct](https://github.com/gcanti/tcomb/blob/master/docs/API.md#the-struct-combinator) combinator.
+Defines an immutable struct type (similar to Immutable.Record), analagous to the [t.interface](https://github.com/gcanti/tcomb/blob/master/docs/API.md#the-interface-combinator) combinator.
 
 ## imlist
 
