@@ -1,7 +1,7 @@
 const t = require("tcomb");
-const iminterface = require("./iminterface");
-const imlist = require("./imlist");
-const imdict = require("./imdict");
+const iminterface = require("./lib/iminterface");
+const imlist = require("./lib/imlist");
+const imdict = require("./lib/imdict");
 
 // Change ANY of the data passed in to the type constructors and you
 // will see nice errors.
@@ -42,3 +42,4 @@ console.log(people.setIn(
 
 // issue #1
 console.log(people.mergeIn(["people", "Jim"], { name: "Jim", age: 30 }));
+// console.log(people.mergeIn(["people", "Jim"], { name: 1, age: 30 }));
